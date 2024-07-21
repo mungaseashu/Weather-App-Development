@@ -13,19 +13,19 @@ class Weather(Tk):
         super().__init__()
         self.title("Weather App")
         self.geometry("800x480")
-        self.iconbitmap(r"C:\Users\OM\Pictures\weatherappnew\weather_icon.ico")
+        self.iconbitmap(r"C:\Users\Lenvo\Desktop\Weather app")
         self.resizable(False, False)
         threading.Thread(target=self.__gui).start()
         
     def __gui(self):
         # search black border 
-        self.img = Image.open(r"C:\Users\OM\Pictures\weatherappnew\black_border.png")
+        self.img = Image.open(r"C:\Users\Lenvo\Desktop\Weather app")
         self.resizeimg = self.img.resize((275, 35))
         self.finalimg = ImageTk.PhotoImage(self.resizeimg)
         Label(image=self.finalimg).place(x=20, y=20)
 
         # search button
-        self.img1 = Image.open(r"C:\Users\OM\Pictures\weatherappnew\search_btn.png")
+        self.img1 = Image.open(r"C:\Users\Lenvo\Desktop\Weather app")
         self.resizeim1 = self.img1.resize((29, 29))
         self.finalimg1 = ImageTk.PhotoImage(self.resizeim1)
         self.b1 = Button(image=self.finalimg1, bg="black", command=self.threading)
@@ -41,7 +41,7 @@ class Weather(Tk):
         Label(text="Current Weather:", font='Arial 14 bold', fg="red").place(x=590, y=7)
 
         # location logo
-        self.img2 = Image.open(r"C:\Users\OM\Pictures\weatherappnew\location.png")
+        self.img2 = Image.open(r"C:\Users\Lenvo\Desktop\Weather app")
         self.resizeimg2 = self.img2.resize((20, 20))
         self.finalimg2 = ImageTk.PhotoImage(self.resizeimg2)
         Label(image=self.finalimg2).place(x=595, y=36)
@@ -55,7 +55,7 @@ class Weather(Tk):
         self.timelbl.place(x=590, y=60)
 
         #  label for the logo according to main
-        self.img3 = Image.open(r"C:\Users\OM\Pictures\weatherappnew\main.png")
+        self.img3 = Image.open(r"C:\Users\Lenvo\Desktop\Weather app")
         self.resizeimg3 = self.img3.resize((200, 190))
         self.finalimg3 = ImageTk.PhotoImage(self.resizeimg3)
         self.icons = Label(image=self.finalimg3)
@@ -72,19 +72,19 @@ class Weather(Tk):
         self.feel.place(x=280, y=245)
 
         # sunrise logo
-        self.finalimg4 = ImageTk.PhotoImage(image=Image.open(r"C:\Users\OM\Pictures\weatherappnew\sunrise.png").resize((40, 40)))
+        self.finalimg4 = ImageTk.PhotoImage(image=Image.open(r"C:\Users\Lenvo\Desktop\Weather app").resize((40, 40)))
         Label(image=self.finalimg4).place(x=560, y=150)
         self.sunrise = Label(text="Sunrise: ", font=("Segoe UI", 14, 'bold'))
         self.sunrise.place(x=603, y=155)
 
         # sunset logo
-        self.finalimg5 = ImageTk.PhotoImage(image=Image.open(r"C:\Users\OM\Pictures\weatherappnew\sunset.png").resize((40, 30)))
+        self.finalimg5 = ImageTk.PhotoImage(image=Image.open(r"C:\Users\Lenvo\Desktop\Weather app").resize((40, 30)))
         Label(image=self.finalimg5).place(x=560, y=215)
         self.sunset = Label(text="Sunset: ", font=("Segoe UI", 14, 'bold'))
         self.sunset.place(x=603, y=210)
 
         # bottom bar
-        self.finalimg6 = ImageTk.PhotoImage(image=Image.open(r"C:\Users\OM\Pictures\weatherappnew\bottom_bar.png").resize((770, 70)))
+        self.finalimg6 = ImageTk.PhotoImage(image=Image.open(r"C:\Users\Lenvo\Desktop\Weather app").resize((770, 70)))
         Label(image=self.finalimg6, bg='#00b7ff').place(x=5, y=330)
 
         # placing the labels
@@ -174,22 +174,22 @@ class Weather(Tk):
 
     def place_image(self, type):
         if type == "Clear":
-            img = r"C:/Users/OM/Pictures/weatherappnew/clear.png"
+            img = r"CC:\Users\Lenvo\Desktop\Weather app"
             self.set_image(img)
         elif type == "Clouds":
-            img = r"C:/Users/OM/Pictures/weatherappnew/clouds.png"
+            img = r"C:\Users\Lenvo\Desktop\Weather app"
             self.set_image(img)
         elif type == "Rain":
-            img = r"C:/Users/OM/Pictures/weatherappnew/rain.png"
+            img = r"C:\Users\Lenvo\Desktop\Weather app"
             self.set_image(img)
         elif type == 'Haze':
-            img = r"C:/Users/OM/Pictures/weatherappnew/Haze.png"
+            img = r"C:\Users\Lenvo\Desktop\Weather app"
             self.set_image(img)
         elif type == 'Snow':
-            img = r"C:\Users\OM\Pictures\weatherappnew\snow.png"
+            img = r"CC:\Users\Lenvo\Desktop\Weather app"
             self.set_image(img)
         else:
-            img = r"C:/Users/OM/Pictures/weatherappnew/main.png"
+            img = r"C:\Users\Lenvo\Desktop\Weather app"
             self.set_image(img)
 
     def set_image(self, img):
@@ -212,7 +212,7 @@ class Weather(Tk):
         self.timelbl.config(text="")
         self.location.config(text="")
         self.search.set("")
-        img = r"C:\Users\OM\Pictures\weatherappnew\main.png"
+        img = r"C:\Users\Lenvo\Desktop\Weather app"
         self.set_image(img)
 
     def exit(self):
